@@ -1,8 +1,8 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 // 🔑 ВСТАВЬ СВОИ ДАННЫЕ
-const supabaseUrl = "https://ТВОЙ_URL.supabase.co"
-const supabaseKey = "ТВОЙ_ANON_KEY"
+const supabaseUrl = "https://noonqvygvomppqlnjbxr.supabase.co"
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5vb25xdnlndm9tcHBxbG5qYnhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg2NTI2OTEsImV4cCI6MjA3NDIyODY5MX0.okTdksHMpOBjR627G9vbWBToW0gyjXYP5-WLtkDanqw"
 
 // Создаем клиент
 const supabase = createClient(supabaseUrl, supabaseKey)
@@ -38,3 +38,4 @@ async function loadProducts() {
 }
 
 window.onload = loadProducts
+
