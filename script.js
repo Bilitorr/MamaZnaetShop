@@ -33,33 +33,6 @@ async function loadProducts() {
     container.appendChild(card);
   });
 }
-export default function Script() {
-  async function handleOrder() {
-    const orderText = "Тестовый заказ: 1x Памперсы"; // пока тест
-    await fetch(`https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        chat_id: process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID,
-        text: `Новый заказ 🛒\n\n${orderText}`
-      })
-    });
-    alert("Заказ отправлен менеджеру в Telegram ✅");
-  }
-
-  return (
-    <div className="p-4">
-      <h1 className="text-xl font-bold">Каталог товаров</h1>
-      {/* здесь у тебя список товаров */}
-
-      <button
-        className="bg-green-600 text-white px-4 py-2 rounded mt-4"
-        onClick={handleOrder}
-      >
-        Оформить заказ
-      </button>
-    </div>
-  );
-}
 loadProducts();
+
 
