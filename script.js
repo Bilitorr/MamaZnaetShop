@@ -39,3 +39,4 @@ async function loadProducts() {
 
 window.onload = loadProducts
 
+
